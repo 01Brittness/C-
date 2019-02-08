@@ -1,7 +1,7 @@
 clear
 clc
 
-disp ('Project 7B - Brittney Sterling; E01243118');
+disp ('User Input - Weather Temps');
 disp ('--------------------------------------------');
 
 disp ('Hi, my name is Zira!');
