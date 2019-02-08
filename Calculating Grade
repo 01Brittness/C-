@@ -1,0 +1,98 @@
+clear
+clc
+
+format bank
+disp('Caluating Grades with Brad');
+disp('========================================================================');
+disp(' ');
+
+disp('My name is Brad. I will be calculating your class grade.');
+disp(' '); 
+disp('Please enter 4 numbers for: Test 1, Test 2, Final Exam, and Assignments.');
+disp(' ');
+disp('========================================================================');
+disp(' ');
+prompt = input('Please enter your Test 1 number grade (0-15): ');
+disp(' ');
+prompt1 = input('Please enter your Test 2 numnber grade (0-15): ');
+disp(' ');
+prompt2 = input('Please enter your Final Exam number grade (0-15): ');
+disp(' ');
+prompt3 = input('Please enter your Assignments number grade (0-50): ');
+disp(' ');
+disp('====================================================');
+disp(' ');
+
+disp('Here is how each category is calculated: ');
+disp(' ');
+disp('Test 1 = 15%');
+disp(' ');
+disp('Test 2 = 15%');
+disp(' ');
+disp('Final Exam = 20%');
+disp(' ');
+disp('Assignments = 50%');
+disp(' ');
+disp('====================================================');
+
+disp(' ');
+disp('Here is the grading scale: ');
+disp(' ');
+
+disp('A  = 95-100          C  = 74-76');
+disp('A- = 90-94           C- = 70-75');
+disp('B+ = 87-93           D+ = 67-69');
+disp('B  = 84-86           D  = 64-66');
+disp('B- = 80-83           D- = 60-63');
+disp('C+ = 77-79           E  = Under 60');
+disp('====================================================');
+disp(' ');
+
+t=(prompt)+(prompt1)+(prompt3)+(prompt2);
+x=['Your final percentage is: ',num2str(t)];
+disp(x);
+disp(' ');
+
+if (t>= 94.5 && t<=100)
+	grade ='A';
+
+elseif (t>=90 && t<94.5)
+	grade = 'A-';
+
+elseif (t>=86.5 && t<=89)
+	grade = 'B+';
+
+elseif (t>=83.5 && t<86.5)
+	grade = 'B';
+
+elseif (t>=79.5 && t<83.5)
+	grade = 'B-';
+
+elseif (t>=76.5 && t<79.5)
+	grade = 'C+';
+
+elseif (t>=73.5 && t<76.5)
+	grade = 'C';
+
+elseif (t>=69.5 && t<73.5)
+	grade = 'C-';
+
+elseif (t>=66.5 && t<69.5)
+	grade = 'D+';
+
+elseif (t>=63.5 && t<66.6)
+	grade = 'D';
+
+elseif (t>=60 && t<63.5)
+	grade = 'D-';
+
+else
+	grade = 'E';
+
+end
+
+z=['Your final letter grade is: ',grade];
+disp(z);
+disp(' ');
+disp('====================================================');
+disp(' ');
