@@ -1,0 +1,59 @@
+clear
+clc
+
+disp ('Cantilever Beam');
+disp ('--------------------------------------------');
+
+format bank
+
+prompt = input ('Please enter in the WIDTH of the Cantilever Beam: ');
+disp (' ');
+
+disp ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+disp (' ');
+prompt2 = input ('Please enter in the HEIGHT of the Cantilever Beam: ');
+disp (' ');
+disp ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+
+disp (' ');
+prompt3 = input ('Please enter in the LENGTH of the Cantilever Beam: ');
+disp (' ');
+disp ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+
+disp (' ');
+prompt4 = input ('Please enter in the FORCE APPLIED to the Cantilever Beam: ');
+disp (' ');
+disp ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+
+disp (' ');
+prompt5 = input ('Enter in the MODULOUS OF ELASTICITY of the Cantilever Beam: ');
+disp (' ');
+disp ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+
+W = (prompt);
+H = (prompt2);
+L =(prompt3);
+P =(prompt4);
+E =(prompt5);
+I = W*H^3/12;
+disp (' ');
+disp([sprintf('The MOMENT OF INERTIA of the Cantilever Beam is (I) = %0.2f',I)]);
+disp (' ');
+disp ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+
+P =(prompt4);
+L =(prompt3);
+E =(prompt5);
+I = W*H^3/12;
+D = P*(L^3)/(3*E*I);
+disp (' ');
+disp([sprintf('The DEFLECTION for the Cantilever Beam is (D) = %0.2f',D)]);
+disp (' ');
+disp ('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+
+P =(prompt4);
+L =(prompt3);
+H = (prompt2);
+B = P*L*H/(2*I);
+disp (' ');
+disp([sprintf('The BENDING STRESS of the Cantilever Beam is (B) = %0.2f',B)]);
