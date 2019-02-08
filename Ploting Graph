@@ -1,0 +1,35 @@
+clear
+clc
+
+disp ('Plotting a Graph');
+disp ('--------------------------------------------');
+
+x = [0:2/pi:10];
+y = exp(-x/3).*sin(x);
+y1 = exp(-2*x/3).*sin(x);
+
+
+%Subplot 1: Line Graph
+figure
+subplot(1,3,1)
+plot(x,y)
+grid
+title('Subplot 1: Line Graph','fontsize', 18,'color','b')
+xlabel('X axis','fontsize',18,'color','b')
+ylabel('Y axis','fontsize',18,'color','b')
+
+%Subplot 2: Bar Graph
+subplot(1,3,2)
+bar(x,y1,'m')
+grid
+title('Subplot 2: Bar Graph','fontsize',18,'color','m')
+xlabel('X axis','fontsize',18,'color','m')
+ylabel('Y axis','fontsize',18,'color','m')
+
+%Subplot 2: Stem Graph
+subplot(1,3,3)
+stem(x,y,'r')
+grid
+title('Subplot 3: Stem Graph','fontsize',18,'color','r')
+xlabel('X axis','fontsize',18,'color','r')
+ylabel('Y axis','fontsize',18,'color','r')
