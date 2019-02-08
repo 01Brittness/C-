@@ -1,0 +1,38 @@
+clear
+clc
+
+disp ('Project 7B - Brittney Sterling; E01243118');
+disp ('--------------------------------------------');
+
+disp ('Hi, my name is Zira!');
+
+disp ('-----------------------------------------------------------');
+disp (' ');
+
+prompt = input('Enter in a temperature: ');
+
+disp (' ');
+disp ('************************************************************');
+disp (' ');
+
+tf = (prompt);
+c = (tf - 32)*5/9;
+disp ([sprintf('I calculated your temperature from Fahrenheit to Celsius: %0.2f',c)]);
+
+disp (' ');
+disp ('*************************************************************');
+disp (' ');
+
+prompt1 = input('Enter in another temperature: ');
+disp (' ');
+disp ('*************************************************************');
+
+disp (' ');
+tc = (prompt1);
+f = tc*9/5+32;
+disp ([sprintf('I calculated your temperature from Celsius to Fahrenheit: %0.2f',f)]);
+
+disp ('**************************************************************');
+
+disp (' ');
+disp ('Please restart me for more converting. If not have a nice day!');
