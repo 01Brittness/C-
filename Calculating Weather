@@ -1,0 +1,55 @@
+clear
+clc
+
+disp ('Calculated Weather Temps');
+disp ('---------------------------------------------');
+
+
+disp ('Calculated Celsius from Fahrenheit:')
+
+ft = [30 50 20 18 15 35 46 25 12 9];
+ct = (ft - 32)*5/9, 'ct';
+
+format bank
+
+disp ('------------------------------------');
+
+disp ('The maximum Fahrenheit value: ');
+mx= max(ft)
+
+disp (' ');
+
+disp ('The minimum Fahrenheit value: ');
+mn= min(ft)
+
+disp (' ');
+
+disp ('The average Fahrenheit value: ');
+av= mean(ft)
+
+disp (' ');
+
+disp ('-------------------------------------');
+
+disp ('The maximum Celsius value: ');
+mx= max(ct)
+
+disp (' ');
+
+disp ('The minimum Celsius value: ');
+mn= min(ct)
+
+disp (' ');
+
+disp ('The average Celsius value: ');
+av= mean(ct)
+
+disp (' ');
+
+x = [1:10];
+y = ct;
+plot(x,y,'r*-')
+grid
+xlabel('Days','fontsize',18,'fontweight','bold','color','m');
+ylabel('Celsius','fontsize',18,'fontweight','bold','color','b');
+title('Calculated Celsius Values','fontsize',30,'fontweight','bold','color','k');
