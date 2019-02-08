@@ -1,0 +1,54 @@
+clear
+clc
+
+disp('Calculating with Zira');
+disp('***************************************************');
+
+disp('Hey, Zira here! I am going to calculate the Moment of Inertia.');
+disp(' ');
+disp('*******************************************************************');
+
+prompt = input('I can start with a Rectangle first. Please enter in a width: ');
+disp(' ');
+prompt1 = input('Now enter in the Height: ');
+disp(' ');
+W = (prompt);
+H = (prompt1);
+IR = W*(H^3)/(12);
+disp([sprintf('Here is my calculated Moment of Interia for the Rectangle: %0.4f',IR)]);
+disp(' ');
+disp('********************************************************************');
+
+disp('Now to find the Moment of Inertia of a Square.');
+disp(' ');
+prompt2 = input('Enter the length of a side of the Square: ');
+disp(' ');
+L = (prompt2);
+IS = ((L^4)/12);
+disp([sprintf('Here is my calculated Moment of Inertia for the Square: %0.4f',IS)]);
+disp(' ');
+disp('********************************************************************');
+disp(' ');
+
+disp('Now to calculate the Momemnt of Inertia of a Circle.');
+disp(' ');
+prompt3 = input('Enter in a Diameter for the circle: ');
+disp(' ');
+D = (prompt3);
+IC = (pi/(64))*(D^4);
+disp([sprintf('Here is my calculated Moment of Inertia for the Circle: %0.4f',IC)]);
+disp(' ');
+disp('********************************************************************');
+
+y=1;
+Y=1;
+n=2;
+N=2;
+m = input('Would you like to calculate again? Y/N: ');
+if (m == 1)
+clc
+run U8A;
+else
+disp(' ');
+disp('Sorry, you have broke me.');
+end
