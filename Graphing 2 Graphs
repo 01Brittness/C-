@@ -1,0 +1,24 @@
+clear
+clc
+
+disp('Graphing Graphs');
+disp('\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\');
+disp(' ');
+
+format bank
+t = -2:0.5:2;
+y = sin(t);
+f = (t.^2)-1;
+g = exp(t/5);
+plot(t,f,'color','k',t,g,'color','r')
+ylabel('f,g','color','m','fontsize',25);
+xlabel('x','color','b','fontsize',25);
+legend('f(x)','x');
+disp('f(x) and g(x) in this point from the left: ');
+disp(' ');
+fzero(@(t)t^2-1-exp(t/5),-1.3)
+disp(' ');
+disp('f(x) and g(x) are equal in this point from the right: ');
+disp(' ');
+fzero(@(t)t^2-1-exp(t/5),1.5)
+grid on
