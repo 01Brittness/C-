@@ -1,0 +1,71 @@
+clear
+clc
+
+disp('Calculating Velocity');
+disp(' ');
+disp('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+disp(' ');
+
+disp('Projectile Motion - Time Series');
+disp(' ');
+vo = input('Enter the Initial Volocity (vo): ');
+disp(' ');
+angle = input('Enter the Angle (0 - 90 degrees): ');
+if (angle <0 || angle >90)
+disp('------------------------------------------------');
+disp('!!!!!!!! Angle is too large, please fix !!!!!!');
+disp('------------------------------------------------');
+disp(' ');
+clc
+run U8D;
+return;
+end
+disp(' ');
+ti = input('Enter Time Interval (ti): ');
+disp(' ');
+
+disp('---------------- Input Information -------------------------');
+disp(' ');
+disp(sprintf('Initial Velocity (vo) = %8.2f',vo));
+disp(' ');
+disp(sprintf('Angle in Degree = %8.2f',angle));
+disp(' ');
+disp(sprintf('Tine interval = %8.2f',ti));
+disp(' ');
+disp('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+g = 9.80665;
+ar = angle*pi/180;
+vxo = vo*cos(ar);
+vyo = vo*sin(ar);
+tof = 2*vo*sin(ar)/g;
+
+disp(' ');
+disp(sprintf('Angle in Radian = \t%8.2f',ar));
+disp(' ');
+disp(sprintf('Horizontal Velocity = \t%8.2f',vxo));
+disp(' ');
+disp(sprintf('Vertical Velocity = \t%8.2f',vyo));
+disp(' ');
+disp(sprintf('Time of Flight = \t%8.2f',tof));
+disp(' ');
+disp('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+disp(' ');
+
+disp('*************Press any key to continue**************');
+disp(' ');
+
+pause
+
+t = 0:ti:(tof+ti);
+hor_dis = vxo*t;
+ver_dis = vyo*t-(g*t.^2)/2;
+ver_vol = vyo-g*t;
+plot(t,ver_dis,'o');
+grid
+
+disp(sprintf('   t      hor_dis   ver_dis  ver_vol %8.2f'));
+disp('----------------------------------------------------------');
+for i = 1:length(t)
+disp(sprintf('%5.2f, %8.2f, %8.2f, %8.2f',t(i),ver_dis(i),hor_dis(i),ver_vol(i)));
+end
