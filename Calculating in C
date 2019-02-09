@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+#include <dos.h>
+#include <string.h>
+#include <conio.h>
+
+int main()
+{
+	int a,b,x,y;
+	
+	printf("Enter the Value of a: ");
+	scanf("%d",&a);
+	printf("\n");
+	
+	printf("Enter the value of b: ");
+	scanf("%d",&b);
+	printf("\n");
+	
+	x=(pow(a,2)*b)+(pow(a,3))-(pow(b,2));
+	y=(pow(a,4)*pow(b,3)+(pow(a,3)*pow(b,2)));
+	
+	printf("\nThe value of X: %d",x);
+	printf("\n");
+	printf("\nThe value of Y: %d",y);
+	printf("\n");
+	
+	printf("\n\nPlease press any key to exit...\n");
+	getch();
+	
+}
