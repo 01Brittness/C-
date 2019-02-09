@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include <dos.h>
+#include <string.h>
+#include <conio.h>
+
+int main()
+{
+	
+printf("\n\n");
+printf("****************************************\n");
+printf("* Hello!!! This is My Firts C Program! *\n");
+printf("****************************************");
+printf("\n\nPress any button to continue....\n\n");
+getch();
+
+printf("\nH\nE\nL\nL\nO\nW\nO\nR\nL\nD\n!\n");
+getch();
+
+printf("\n\nPress any key to exit...\n");
+getch();
+
+}
