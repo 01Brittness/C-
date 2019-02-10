@@ -1,0 +1,38 @@
+/*Project 9D - Brittney Sterling; E01243118;*/
+
+#include <stdio.h>
+#include <math.h>
+#include <dos.h>
+#include <string.h>
+#include <conio.h>
+
+int main()
+{
+	
+	int x,y,a,s,m;
+	
+	printf("Enter in two inters: \n");
+	
+	printf("\nInteger One: ");
+	scanf("%d",&x);
+	printf("\n");
+	
+	printf("Integer Two: ");
+	scanf("%d",&y);
+	printf("\n");
+	
+	a=x+y;
+	s=x-y;
+	m=x*y;
+	printf("The Results: \n");
+	printf("\nSum:\t\t\t%d",a);
+	printf("\n");
+	printf("\nDifference:\t\t%d",s);
+	printf("\n");
+	printf("\nMultipulcation:\t\t%d",m);
+	printf("\n");
+	
+	printf("\n\nPlease press any key to exit...\n");
+	getch();
+	
+}
