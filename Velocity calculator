@@ -1,0 +1,82 @@
+/*Project 11-3 - Brittney Sterling; E01243118;*/
+
+#include <stdio.h>
+#include <math.h>
+#include <dos.h>
+#include <string.h>
+#include <conio.h>
+
+int main()
+{
+	//Variables
+	float vo,angle,ti,g,ar,vxo,vyo,tof,t,hor_dis,ver_dis,ver_vol,a;
+	
+	printf("||Project 11-3\t  Brittney Sterling\tE01243118 ||");
+	printf("\n====================================================\n\n");
+	
+	//This will Ask the user to input Velocity, time interval, Angle in degrees
+	printf("\n***************************************");	
+	printf("\n*  Projectile Motion (Time Series).   *");
+	printf("\n***************************************");
+	
+	printf("\nEnter a Intial Velocity (vo): ");
+	scanf("%f",&vo);
+	printf("\nEnter an Angle (0 - 90 degrees): ");
+	scanf("%f",&angle);
+	//angle too large
+	printf("\nEnter a Time Interval (ti): ");
+	scanf("%f",&ti);
+	
+	//display User input
+	printf("\n\n------------------Input Information------------------");
+	printf("\n                          \t~~~~~~~~~~~");
+	printf("\nInitial Velocity (vo) = \t~%8.2f ~",vo);
+	printf("\n                          \t~~~~~~~~~~~");
+	printf("\n\n                       	   \t~~~~~~~~~~~");
+	printf("\nAngle in Degrees (angle) = \t~%8.2f ~",angle);
+	printf("\n                             \t~~~~~~~~~~~");
+	printf("\n\n                     \t\t~~~~~~~~~~~");
+	printf("\nTime Interval (ti) = \t\t~%8.2f ~",ti);
+	printf("\n                       \t\t~~~~~~~~~~~");
+	printf("\n\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+	
+	//Calculate the Velocities, angle in radians, Time of flight
+	g=9.80665;
+	ar=angle*2*atan(1)/180;
+	vxo=vo*cos(ar);
+	vyo=vo*sin(ar);
+	tof=2*vo*sin(ar)/g;
+	
+	printf("\n                  \t>>>>>>>>>>>");
+	printf("\nAngle in Radian = \t^%8.2f ^",ar);
+	printf("\n                  \t>>>>>>>>>>>");
+	printf("\n\n                    \t>>>>>>>>>>>");
+	printf("\nHorizontal Velocity = \t^%8.2f ^",vxo);
+	printf("\n                      \t>>>>>>>>>>>");
+	printf("\n\n                  \t>>>>>>>>>>>");
+	printf("\nVertical Velocity =  \t^%8.2f ^",vyo);
+	printf("\n                    \t>>>>>>>>>>>");
+	printf("\n\n                 \t>>>>>>>>>>>");	
+	printf("\nTime of Flight =  \t^%8.2f ^",tof);
+	printf("\n                 \t>>>>>>>>>>>");
+	printf("\n\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n");
+	
+	printf("\n======== Press enter to continue ==================\n\n");
+	getche();
+	
+	//Table
+	printf("  t   		  hor_dis       	 ver_dis   		 ver_vel\n");
+	printf("--------------------------------------------------------------------------\n");	
+	
+	for(a=0;a<=tof;a=a+ti)
+	{
+	t = a;
+	hor_dis = vxo*t;
+	ver_dis = vyo*t-(g*pow(t,2))/2;
+	ver_vol = vyo-g*t;
+	printf("%5.2f		%8.2f		%8.2f		%8.2f\n",t,hor_dis,ver_dis,ver_vol);
+	}
+	
+	printf("\n\n*****Press the enter key to exit*****\n");
+getch();
+}
