@@ -1,0 +1,51 @@
+/*Project 11-4 - Brittney Sterling; E01243118;*/
+
+#include <stdio.h>
+#include <math.h>
+#include <dos.h>
+#include <string.h>
+#include <conio.h>
+#include <iostream>
+
+int main()
+{
+	//Variables
+	float avg,sum=0,n,f[100],ct,c[100];
+	int i;
+		
+	printf("||Project 11-4\t  Brittney Sterling\tE01243118 ||");
+	printf("\n====================================================\n\n");
+	
+	//This will introduce the program and ask the user to choose how many temps to calculate
+	printf("\n******************************************************************************************************************");	
+	printf("\n*  This program will convert Fahrenheit to Celsius Temperatures, and it will calculate the average in Celsius.   *");
+	printf("\n******************************************************************************************************************\n\n");
+	
+	printf("Enter 5 Fahrenheit temperatures: \n");
+	for (i=1;i<=5;i++)
+	{		
+		printf("\nTemperature - %d: ",i);
+		scanf("%f",&n);	
+		f[i]=n;	
+		ct=(n-32)*5./9;
+		c[i]=ct;
+		sum +=c[i];
+		
+	}
+	
+		printf("\n		Fahrenheit   \tCelsius\n");
+		printf("	-----------------------------------------\n");
+		
+	for (i=1;i<6;i++)
+	{	
+		printf("	%7.2f\t\t\t%7.2f\n",f[i],c[i]);	
+	}	
+	
+	avg=sum/5;	
+	printf("\n\nThe Average Temperature in Celsius is: %0.2f",avg);
+	
+	printf("\n\nPress any key to exit>>>>>>>>");
+	
+	getche();
+	return 0;
+}
