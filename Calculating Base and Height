@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+#include <dos.h>
+#include <string.h>
+#include <conio.h>
+
+int main()
+{
+	
+	int b,h,a,p;
+	
+	printf("Enter the Value of b: ");
+	scanf("%d",&b);
+	printf("\n");
+	
+	printf("Enter the value of h: ");
+	scanf("%d",&h);
+	printf("\n");
+	
+	a=b*h;
+	p=(2*(b+h));
+	printf("\nThe calculated area is: %d",a);
+	printf("\n");
+	printf("\nThe calculated perimeter is: %d",p);
+	printf("\n");
+	
+	printf("\n\nPlease press any key to exit...\n");
+	getch();
+}
